@@ -1,17 +1,18 @@
 * Version
-  v0.1.0
+  v0.1.1
 * Changelog
-** v0.1.0
-   - Add a ruby file that 
+** v0.1
+   Modes questions and initial architecture implementation
   | version | changelog                                                                                           |
   |---------+-----------------------------------------------------------------------------------------------------|
   | v0.1.0  | single ruby program for asking the equivalent ionian scale root (major scale) of a given scale mode |
+  | v0.1.1  | refactor monolithic structure with several classes to contain the modal questions                   |
 * Description
   A simple ruby script containing randomized set of quizzes about jazz music theories
 * Starting the program
   #+BEGIN_SRC shell
     $ cd <dir_to>/jazz-quiz
-    $ ruby scale.rb
+    $ ruby main.rb
   #+END_SRC
 * Exiting the program
   Press =Ctrl+C=
