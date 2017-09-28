@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-
+# coding: utf-8
+# all these are defined in relative semitones to C
 def keys
   {0 => ['C'],
    1 => ['C♯', 'D♭'],
@@ -39,6 +39,9 @@ def modes
    7 => ['Mixolydian'],
    9 => ['Aeolian'],
    11 => ['Locrian']}
+end
+def major_scale
+  [0, 2, 4, 5, 7, 9, 11]
 end
 
 
