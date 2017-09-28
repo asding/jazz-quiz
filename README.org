@@ -1,1 +1,17 @@
-A simple ruby script containing randomized set of quizzes about jazz music theories
+* Version
+  v0.1.0
+* Changelog
+** v0.1.0
+   - Add a ruby file that 
+  | version | changelog                                                                                           |
+  |---------+-----------------------------------------------------------------------------------------------------|
+  | v0.1.0  | single ruby program for asking the equivalent ionian scale root (major scale) of a given scale mode |
+* Description
+  A simple ruby script containing randomized set of quizzes about jazz music theories
+* Starting the program
+  #+BEGIN_SRC shell
+    $ cd <dir_to>/jazz-quiz
+    $ ruby scale.rb
+  #+END_SRC
+* Exiting the program
+  Press =Ctrl+C=
