@@ -14,6 +14,5 @@ begin
   resume = Questions.ask
   sleep 0.5
 end while $continue
-puts
 puts "================================================================"
 puts "Hope I have helped your revisions in jazz theories, see ya soon!"

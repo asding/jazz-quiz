@@ -32,8 +32,7 @@ class Questions
     end
     def self.answer(this)
       puts
-      puts "===> Response: press [q] to quit, [ENTER] to continue..."
-      print "  "
+      print "press [q] to quit, [ENTER] to continue: "
       input = gets.chomp
       $continue = false if input == 'q'
       puts
