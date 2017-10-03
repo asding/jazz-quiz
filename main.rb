@@ -9,7 +9,11 @@ puts "                      JAZZ MUSIC THEORY QUIZ"
 puts "================================================================"
 puts
 
+$continue = true
 begin
-  Questions.ask
+  resume = Questions.ask
   sleep 0.5
-end while true
+end while $continue
+puts
+puts "================================================================"
+puts "Hope I have helped your revisions in jazz theories, see ya soon!"

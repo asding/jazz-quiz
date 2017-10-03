@@ -9,14 +9,9 @@ class Modes < Questions::Interface
   def self.mode_root
     k_idx, m_idx = KEYS.keys.sample, MODES.keys.sample
     key, mode = KEYS[k_idx].sample, MODES[m_idx].sample
-    puts "--------------------------------"
-    puts "MODES - find the root of a mode"
-    puts "--------------------------------"
-    puts "===> Q: Find the equivalent ionian mode (major scale) root key of:"
-    puts "  #{[key, mode].join('  ')}"
-    gets
-    root = KEYS[(k_idx - m_idx)%12].join("/")
-    puts "===> A: #{root}"
-    puts
+    title "MODES - find the root of a mode"
+    prompt ["Find the equivalent ionian mode (major scale) root key of:",
+            "#{[key, mode].join('  ')}"]
+    answer KEYS[(k_idx - m_idx)%12].join("/")
   end
 end

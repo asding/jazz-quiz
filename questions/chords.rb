@@ -8,16 +8,11 @@ class Chords < Questions::Interface
   end
 
   def self.notes_in_chords
-    key, mode, degree = KEYS[KEYS.keys.sample], chord_modes.sample, chord_degrees.sample
-    puts "--------------------------------"
-    puts "CHORDS - notes of chords given key"
-    puts "--------------------------------"
-    puts "===> Q: Find notes in the chords of:"
-    puts "  #{[key.sample, mode, degree].map(&:capitalize).join('  ')}"
-    gets
-    chord = send(degree, send(mode, key)).map { |e| e.join('/') }.join('  ')
-    puts "===> A: #{chord}"
-    puts
+    key, mode, degree = KEYS[KEYS.keys.sample].sample, chord_modes.sample, chord_degrees.sample
+    title "CHORDS - notes of chords given key"
+    prompt ["Find notes in the chords of:",
+            "#{[key + ' ', mode, degree].map(&:capitalize).join(' ')}"]
+    answer send("_#{degree}", send("_#{mode}", key)).map { |e| e.join('/') }.join('  ')
   end
 
   private
