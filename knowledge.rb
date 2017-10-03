@@ -40,8 +40,12 @@ def modes
    9 => ['Aeolian'],
    11 => ['Locrian']}
 end
-def major_scale
+def ionian_scale # i.e major scale
   [0, 2, 4, 5, 7, 9, 11]
 end
-
+def self.scale_in_mode(mode)
+  scale_index = a.index(semitones_inference(modes)[mode])
+  mode_scale = loop_array(ionian_scale, scale_index)
+  increment_array_and_modulo(mode_scale, -mode_scale.first, 12)
+end
 

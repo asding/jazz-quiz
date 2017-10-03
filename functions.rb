@@ -15,7 +15,6 @@ def loop_array(array, index)
   raise ArgumentError, 'array index out of range' unless array[index]
   array[index, (array.length - index)] + array[0, index]
 end
-def normalise_array_with_ascending_modulo(array, modulo) # make first element 0, mod the rest with modulo
-  diff = array.first
-  array.map { |i| (i - diff + modulo) % modulo }
+def increment_array_with_modulo(array, increment, modulo)
+  array.map { |i| (i + increment) % modulo }
 end
