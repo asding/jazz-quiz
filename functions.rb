@@ -15,6 +15,6 @@ def loop_array(array, index)
   raise ArgumentError, 'array index out of range' unless array[index]
   array[index, (array.length - index)] + array[0, index]
 end
-def increment_array_with_modulo(array, increment, modulo)
+def increment_array_and_modulo(array, increment, modulo)
   array.map { |i| (i + increment) % modulo }
 end
