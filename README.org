@@ -1,6 +1,13 @@
 * Version
-  v0.1.1
+  v0.2.0
 * Changelog
+** v0.2
+   Chords questions and refactoring of question and answer prompts
+   | version | changelog                                                      |
+   |---------+----------------------------------------------------------------|
+   | v0.2.0  | added chords questions - determine notes in a given chord name |
+   |         | standardise methods for questions and answer                   |
+   |         | press q to exit                                                |
 ** v0.1
    Modes questions and initial architecture implementation
   | version | changelog                                                                                           |
@@ -15,4 +22,6 @@
     $ ruby main.rb
   #+END_SRC
 * Exiting the program
-  Press =Ctrl+C=
+  You may either:
+  1. Press =[q]= and =[ENTER]= when prompted
+  2. Press =Ctrl+C= at anytime
