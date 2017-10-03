@@ -22,12 +22,12 @@ class Chords < Questions::Interface
     [:major, :minor, :dominant]
   end  
   def self.chord_degrees
-    [:seventh, :ninth, :eleventh, :thirteenth]
+    [:"7th", :'9th', :'11th', :'13th']
   end
 
   # main constructor
   def self.chord_notes_of_mode(key, mode, inversion: 0)
-    k_idx = semitones_inference(KEYS)[key.sample].first
+    k_idx = semitones_inference(KEYS)[key].first
     scale_notes = scale_in_mode(mode).map { |i| KEYS[(k_idx + i) % 12] }
     # TODO: implement inversions
     scale_notes.select.with_index { |_, i| i.even? } +
@@ -35,27 +35,27 @@ class Chords < Questions::Interface
   end
   
   # mode of chords
-  def self.major(key)
+  def self._major(key)
     chord_notes_of_mode(key, 'Ionian')
   end
-  def self.minor(key)
+  def self._minor(key)
     chord_notes_of_mode(key, 'Aeolian')
   end
-  def self.dominant(key)
+  def self._dominant(key)
     chord_notes_of_mode(key, 'Mixolydian')
   end
   
   # degree of chords
-  def self.seventh(chord)
+  def self._7th(chord)
     chord[0..3]
   end
-  def self.ninth(chord)
+  def self._9th(chord)
     chord[0..4]
   end
-  def self.eleventh(chord)
+  def self._11th(chord)
     chord[0..5]
   end
-  def self.thirteenth(chord)
+  def self._13th(chord)
     chord[0..6]
   end
 end
