@@ -8,7 +8,7 @@ class Chords < Questions::Interface
   end
 
   def self.notes_in_chords
-    key, mode, degree = keys[keys.keys.sample], chord_modes.sample, chord_degrees.sample
+    key, mode, degree = KEYS[KEYS.keys.sample], chord_modes.sample, chord_degrees.sample
     puts "--------------------------------"
     puts "CHORDS - notes of chords given key"
     puts "--------------------------------"
@@ -32,8 +32,8 @@ class Chords < Questions::Interface
 
   # main constructor
   def self.chord_notes_of_mode(key, mode, inversion: 0)
-    k_idx = semitones_inference(keys)[key.sample].first
-    scale_notes = scale_in_mode(mode).map { |i| keys[(k_idx + i) % 12] }
+    k_idx = semitones_inference(KEYS)[key.sample].first
+    scale_notes = scale_in_mode(mode).map { |i| KEYS[(k_idx + i) % 12] }
     # TODO: implement inversions
     scale_notes.select.with_index { |_, i| i.even? } +
       scale_notes.select.with_index { |_, i| i.odd? }

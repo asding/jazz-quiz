@@ -7,15 +7,15 @@ class Modes < Questions::Interface
     send(questions.sample)
   end
   def self.mode_root
-    k_idx, m_idx = keys.keys.sample, modes.keys.sample
-    key, mode = keys[k_idx].sample, modes[m_idx].sample
+    k_idx, m_idx = KEYS.keys.sample, MODES.keys.sample
+    key, mode = KEYS[k_idx].sample, MODES[m_idx].sample
     puts "--------------------------------"
     puts "MODES - find the root of a mode"
     puts "--------------------------------"
     puts "===> Q: Find the equivalent ionian mode (major scale) root key of:"
     puts "  #{[key, mode].join('  ')}"
     gets
-    root = keys[(k_idx - m_idx)%12].join("/")
+    root = KEYS[(k_idx - m_idx)%12].join("/")
     puts "===> A: #{root}"
     puts
   end
